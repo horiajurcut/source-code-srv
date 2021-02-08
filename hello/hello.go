@@ -10,5 +10,5 @@ type WorldResponse struct {
 //
 // encore:api public
 func World(ctx context.Context) (*WorldResponse, error) {
-	return &WorldResponse{Message: "Hello, world!"}, nil
+	return &WorldResponse{Message: "Hello, source code!"}, nil
 }
