@@ -1,0 +1,14 @@
+CREATE TABLE game_studio
+(
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    created TIMESTAMP WITH TIME ZONE NOT NULL
+);
+
+CREATE TABLE game
+(
+    id BIGSERIAL PRIMARY KEY,
+    game_studio_id BIGINT NOT NULL REFERENCES game_studio (id),
+    name TEXT NOT NULL,
+    created TIMESTAMP WITH TIME ZONE NOT NULL
+);
